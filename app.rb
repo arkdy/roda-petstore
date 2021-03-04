@@ -29,6 +29,7 @@ class App < Roda
         end
       end
 
+      # GET /pets/:id
       r.is Integer do |id|
         @pets.find { |h| h[:id] == id }.to_json
       end
