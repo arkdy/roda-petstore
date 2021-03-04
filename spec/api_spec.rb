@@ -30,7 +30,7 @@ describe "Petsore" do
       let(:tags) { ["dog", "cat"] }
 
       response "200", "pet response" do
-        schema type: "array", items: {"$ref" => "#/components/schemas/Pet"}
+        schema type: "array", items: {"$ref" => "schemas/pet.json"}
         run_test!
       end
     end
